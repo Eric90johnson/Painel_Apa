@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão à Vista APA</title>
+
+    <link rel="stylesheet" href="/teste painel apa/CSS/style.css">
+    <script src="/teste painel apa/Javascript/script.js" defer></script>
+</head>
+<body>
+    
+    <header>
+    <div>
+        <a href="#">
+            <img src="/teste painel apa/imagem/baixados.png" alt="Logo" class="header-logo">
+        </a>
+        <div class="header-title">
+            <h2>PAINEL GESTÃO À VISTA APA</h2>
+        </div>
+        </div>
+</header>
+
+<div class="import-box">
+    <section>
+        <p>Escolha um método de importação:</p>
+        <div>
+            <h5>1. Importar de Arquivo CSV</h5>
+            <div>
+                <input type="file" id="fileInput" accept=".csv">
+            </div>
+            <button id="importarBtn">Processar Arquivo</button>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>2. Cole os dados da sua planilha do Excel aqui...</h5>
+            <textarea id="pasteData" rows="3"></textarea>
+            <button id="pasteBtn">Colar e Importar</button>
+        </div>
+    </section>
+</div>
+
+<div>
+    <button id="saveBtn" title="Salvar Alterações">
+        <i></i>
+        Salvar
+    </button>
+    <button id="resetBtn" title="Limpar Tabela">
+        <i></i>
+        Limpar
+    </button>
+</div>
+
+<div>
+    <div>
+        <div>
+            <table id="painelTable">
+                <thead>
+                    <tr>
+                        <th>JANELA</th>
+                        <th>CARRETA<br>NA DOCA</th>
+                        <th>PLACA<br>DO VEÍCULO</th>
+                        <th>CLIENTE</th>
+                        <th>VOLUMES</th>
+                        <th>CONFERENTE</th>
+                        <th>DOCA</th>
+                        <th>INÍCIO</th>
+                        <th>FIM</th>
+                        <th>STATUS</th>
+                        <th>OBS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <aside>
+        <h2>Resumo do Painel</h2>
+        <div>
+            <div>
+                <div></div>
+                <span>No Prazo</span>
+            </div>
+            <div>
+                <div></div>
+                <span>Em andamento</span>
+            </div>
+            <div>
+                <div></div>
+                <span>Em andamento com atraso</span>
+            </div>
+            <div>
+                <div></div>
+                <span>Em Atraso ou Perdeu Janela</span>
+            </div>
+            <div>
+                <div></div>
+                <span>Finalizado no horário</span>
+            </div>
+            <div>
+                <div></div>
+                <span>Sem informações</span>
+            </div>
+        </div>
+        <div id="summary-info">
+        </div>
+    </aside>
+</div>
+
+<div>
+    <button id="fullscreenBtn">Visualizar em Tela Cheia</button>
+    <div>
+        <button id="addConferenteBtn">Inserir Novo Conferente</button>
+        <button id="addObsBtn">Inserir Nova Observação</button>
+        <button id="exportExcelBtn">Exportar para Excel</button>
+    </div>
+</div>
+    
+<div>
+  <div>
+    <div>
+      <div>
+        <h5>Atenção!</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div>
+        INSIRA A DOCA E O HORARIO INICIAL DO CARREGAMENTO
+      </div>
+      <div>
+        <button type="button" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div>
+    <div>
+      <div>
+        <h5>Atraso Detectado!</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div>
+        INFORME O MOTIVO DO ATRASO!
+      </div>
+      <div>
+        <button type="button" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div>
+    <div>
+      <div>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div>
+        <h3>DADOS SALVOS COM SUCESSO!</h3>
+      </div>
+      <div>
+        <button type="button" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalConferente">
+    <div>
+        <span>&times;</span>
+        <h3>Inserir Novo Conferente</h3>
+        <form>
+            <label for="inputConferente">Nome do Conferente:</label>
+            <input type="text" id="inputConferente" name="conferente" required>
+            <button type="submit">Adicionar Conferente</button>
+        </form>
+    </div>
+</div>
+
+<div id="modalObs">
+    <div>
+        <span>&times;</span>
+        <h3>Inserir Nova Observação</h3>
+        <form>
+            <label for="inputObs">Nova Observação:</label>
+            <input type="text" id="inputObs" name="observacao" required>
+            <button type="submit">Adicionar Observação</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

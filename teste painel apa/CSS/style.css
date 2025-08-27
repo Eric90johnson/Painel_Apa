@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0C296C;
+    color: white;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header > div {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* Remova o padding-left daqui para a logo colar na borda */
+    padding-right: 20px; /* Mantém o espaçamento à direita se necessário */
+}
+
+.header-logo {
+    height: 60px;
+    object-fit: contain;
+    /* Remova o padding-left daqui também */
+    margin: 0;
+    padding: 0;
+}
+
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+}
