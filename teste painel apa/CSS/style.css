@@ -54,5 +54,20 @@ header > div {
     margin-top: 1%
 }
 
+/*botões de salvar e limpar*/
+#saveBtn .fas.fa-save {
+    color: #0C296C; /* Cor azul do cabeçalho para o ícone de disquete */
+}
 
-
+/* Opcional: Se você quiser que o botão de salvar seja transparente */
+#saveBtn {
+    background-color: transparent;
+    border: 1px solid #0C296C; /* Borda azul para o botão */
+}
+#saveBtn:hover {
+    background-color: #0C296C;
+    color: white; /* Cor do texto/ícone branca no hover */
+}
+#saveBtn:hover .fas.fa-save {
+    color: white; /* Garante que o ícone fique branco no hover */
+}
