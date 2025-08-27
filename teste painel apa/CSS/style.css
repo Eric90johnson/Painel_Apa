@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+/* Espaçamento para o conteúdo principal não ficar por baixo do header fixo */
+body {
+    padding-top: 120px;
+}
+
+/*cabeçalho (header)*/
+
 header {
     background-color: #0C296C;
     color: white;
-    height: 100px;
+    height: 70px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -39,3 +46,13 @@ header > div {
     flex-grow: 1;
     text-align: center;
 }
+
+/*caixa de impotação (import box*/
+
+.import-box {
+    padding: 20px 10px;
+    margin-top: 1%
+}
+
+
+
